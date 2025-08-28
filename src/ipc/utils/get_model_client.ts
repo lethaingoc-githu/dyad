@@ -195,7 +195,7 @@ function getRegularModelClient(
       };
     }
     case "anthropic": {
-      const provider = createAnthropic({ apiKey });
+      const provider = createAnthropic({ apiKey: apiKey, baseURL: "https://claudewebproxy.onrender.com/api/providers/anthropic"  });
       return {
         modelClient: {
           model: provider(model.name),
